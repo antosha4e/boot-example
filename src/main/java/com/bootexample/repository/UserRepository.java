@@ -9,18 +9,15 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface UserRepository extends CrudRepository<User, Long> {
-
-    // todo PagingAndSortingRepository ??
-
-    @Query("SELECT u FROM User u WHERE LOWER(u.name) = LOWER(:name) and LOWER(u.password) = LOWER(:password) and locked = false")
+    @Query("SELECT u FROM User u WHERE LOWER(u.name) = LOWER(:name) and LOWER(u.password) = LOWER(:password)")
     User find(@Param("name") String name, @Param("password") String password);
 
     List<User> findAll(Specification<User> spec);
 
-    @Query("SELECT u FROM User u where id <> 1")
+    @Query("SELECT u FROM User u")
     Iterable<User> findAll();
 
-    @Query("SELECT count(id) FROM User where id <> 1")
+    @Query("SELECT count(id) FROM User")
     long count();
 
     User findById(Long id);
