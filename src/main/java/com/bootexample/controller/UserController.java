@@ -59,7 +59,7 @@ public class UserController {
         int from = pageSize * (pageId - 1);
         int to = pageSize * pageId;
 
-        // todo refactor this when comes to Postgresql, use limit and offset instead
+        // todo PagingAndSortingRepository ??
 
         if(list.size() < to) {
             return list;

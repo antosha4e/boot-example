@@ -43,8 +43,6 @@ public class AuthController {
             throw new UnathorizedException("Bad credentials. Access denied.");
         }
 
-        // TODO что делать при повторной попытке логина?
-
         User user = userRepository.find(credentials.getUsername(), PasswordEncryptor.encryptPassword(credentials.getPassword()));
 
         if(user == null) {
