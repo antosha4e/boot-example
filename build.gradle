@@ -1,5 +1,5 @@
 group 'com.bootexample'
-version '0.5'
+version '0.1'
 
 buildscript {
     repositories {
@@ -48,7 +48,6 @@ dependencies {
     compile("commons-io:commons-io:2.4")
 
     compile("com.h2database:h2")
-    compile("javax.mail:mail:1.4.7")
     testCompile("junit:junit")
 }
 
