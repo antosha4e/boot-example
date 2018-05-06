@@ -6,7 +6,6 @@ Spring Boot example
 To build project:
 
 ```
-#!java
 
 ./gradlew clean build
 
@@ -15,7 +14,6 @@ To build project:
 To run project:
 
 ```
-#!java
 
 ./gradlew bootRun -Dserver.port=8080
 
@@ -24,7 +22,6 @@ To run project:
 Get application version:
 
 ```
-#!java
 
 /api/version
 
